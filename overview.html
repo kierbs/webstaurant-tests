@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Overview of WebstaurantStore Test Suite and Framework Project</title>
+</head>
+<body>
+<p>
+<h2>Overview of WebstaurantStore Test Suite and Framework 
+<br>
+Exercise and Project</h2>
+<span>
+I did not have time to try pulling this project into a fresh workspace to build it, and I haven't
+<br>
+worked much with Java projects to know what issues to anticipate. I targeted Java 1.8 because it
+<br>
+was an earlier version that I had installed that could maybe be easier to run. Please let me know
+<br>
+if there are any issues or there is anything I can do to make running this easier.
+<p>
+This is a framework and test suite proof of concept that I built from scratch, without copying from 
+<br>
+existing work. It was a crash course and great learning opportunity for me, setting up and learning:
+<br>
+&ensp;* Eclipse</t>
+<br>
+&ensp;* Maven
+<br>
+&ensp;* Java Selenium bindings
+<br>
+&ensp;* TestNG
+<br>
+&ensp;* Java nuances and best practices, since C#/.NET had been my primary tools previously.
+</span>
+<p>
+General Implementation Notes:
+<br>
+&ensp;* This is just a partial implementation for an exercise, not necessarily representative of the
+<br>
+&emsp; design that may be implemented within a particular organization.
+<br>
+&ensp;* With the C# bindings, I had found that a generic explicit wait to find all elements removed the 
+<br>
+&emsp; need for sleeps, waiting to be sure the element has loaded, etc. I stuck with that concept here,
+<br>
+ &emsp; instead of moving to Page Factory using annotations. I also am not familiar with pros and cons of
+<br>
+ &emsp; initializing all the elements of a page, so for now I'm going with the most dynamic/flexible.
+<br>
+ &emsp; solution with which I am familiar. Having the methods to find elements centralized in this way
+<br>
+&emsp; could also be helpful in case anything needs to be added or changed in the find methods (for 
+<br>
+&emsp; stability, efficiency, possibly metrics, etc.).
+<br>
+&ensp;* I implemented my own helper utilities, but would first use utility classes already used by the
+<br>
+&emsp; organization. 
+</p>
+<p>
+Possible improvements or areas to research, that will be out of scope (time) for the
+initial version:
+<br>
+&ensp;* The framework would be in a separate project.
+<br>
+&ensp;* Look into use of modules if used by the organization.
+<br>
+&ensp;* Handle additional scenarios like sorting, accessibility, logged in user,
+<br>
+&emsp;  out of stock items, other preferences or setup, etc.
+<br>
+&ensp;* Investigate pros and cons of Page Factory using annotations
+<br>
+&ensp;* Determine the best way to pass test parameters in, which may be dependent on 
+<br>
+&emsp;  how the tests are executed and the practices/preferences of other developers.
+<br>
+&ensp;* Make processing of search results in a loop asynchronous, if realistic.
+<br>
+&ensp;* Discuss test reporting and notification needs and implement accordingly.
+<br>
+&ensp;* Replace hard-coded strings (e.g. environments = "prod") with consts, enums or
+<br>
+&emsp;  helper classes as appropriate.
+<br>
+&ensp;* Improve documentation, make comments more concise where possible.
+<br>
+&ensp;* Add highlighting of elements (using colored borders via JS) and screenshots.
+<br>
+&ensp;* Improve separation of duties between test and page classes if possible. The 
+<br>
+&emsp; page classes handle most page functionality, but the test grabs the entire list
+<br>
+&emsp; of results from it so it can loop through them.
+<br>
+&ensp;* Consider moving the dialog to add accessories to cart to its own page classes.
+<br>
+&ensp;* Improve readability, particularly of test steps and POM. Consider listing POM
+<br>
+&emsp; of results from it so it can loop through them.
+<br>
+&ensp;* Make sure objects and ideally process get cleaned up.
+<br>
+&ensp;* Adjust to any other standards or conventions within organization. 
+
+</p>
+</body>
+</html>

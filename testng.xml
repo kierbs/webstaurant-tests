@@ -1,0 +1,7 @@
+<suite name="WebstaurantStoreTests">
+	<test name="StoreTest">
+		<classes>
+			<class name="bryankier.webstaurant.tests.WebstaurantStoreTests" />
+		</classes>
+	</test>
+</suite>
